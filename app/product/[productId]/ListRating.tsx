@@ -22,7 +22,7 @@ const ListRating: React.FC<ListRatingProps> = ({ product }) => {
             return (
               <div
                 key={review.id}
-                className="max-w-300px"
+                className="max-w-[300px]"
               >
                 <div
                   className="
