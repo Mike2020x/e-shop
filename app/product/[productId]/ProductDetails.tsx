@@ -5,6 +5,7 @@ import SetQuantity from "@/app/components/products/SetQuantity";
 import { Rating } from "@mui/material";
 import { useCallback, useState } from "react";
 import Button from "@/app/components/Button";
+import ProductImage from "@/app/components/products/ProductImage";
 interface ProductDetailsProps {
   product: any;
 }
@@ -81,9 +82,14 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ product }) => {
   grid-cols-1
   md:grid-cols-2
   gap-12
+  pb-2
   "
     >
-      <div>Images</div>
+      <ProductImage
+        cartProduct={cartProduct}
+        product={product}
+        handleColorSelect={handleColorSelect}
+      />
       <div className="flex flex-col gap-1 text-slate-500 text-sm">
         <h2
           className="
