@@ -1,5 +1,6 @@
 "use client";
 
+import Avatar from "@/app/components/Avatar";
 import Heading from "@/app/components/Heading";
 import { Rating } from "@mui/material";
 import moment from "moment";
@@ -29,7 +30,7 @@ const ListRating: React.FC<ListRatingProps> = ({ product }) => {
                 gap-2
                 items-center"
                 >
-                  <div>Avatar</div>
+                  <Avatar src={review.user.image} />
                   <div
                     className="
                   font-semibold
