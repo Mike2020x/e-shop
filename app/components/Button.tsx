@@ -10,20 +10,21 @@ interface ButtomProps {
   custom?: string;
   icon?: IconType;
   //event
-  onclick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Buttom: React.FC<ButtomProps> = ({
+const Button: React.FC<ButtomProps> = ({
   label,
   disabled,
   outline,
   small,
   custom,
   icon: Icon,
-  onclick,
+  onClick,
 }) => {
   return (
     <button
+      onClick={onClick}
       disabled={disabled}
       className={`
       disabled:opacity-70
@@ -49,4 +50,4 @@ const Buttom: React.FC<ButtomProps> = ({
     </button>
   );
 };
-export default Buttom;
+export default Button;
